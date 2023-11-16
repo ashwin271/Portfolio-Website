@@ -1,8 +1,10 @@
 body{
     font-family: hack;
     margin: 0;
+    background-color: grey;
 }
 
 #main-container{
     font-weight: bold;
+    height: 300vh;
 }
