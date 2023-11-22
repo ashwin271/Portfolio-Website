@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Responsive Navbar with Light/Dark Mode</title>
+</head>
+<body class="bg-gray-100 dark:bg-gray-800 transition duration-500 ease-in-out">
+
+  <!-- Navbar -->
+  <nav class="bg-white dark:bg-gray-900 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+
+      <!-- Logo -->
+      <div class="text-xl font-semibold text-gray-800 dark:text-white">
+        Your Logo
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="block lg:hidden">
+        <button id="mobile-menu-btn" class="text-gray-600 dark:text-gray-300 focus:outline-none">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links (hidden on mobile) -->
+      <ul class="hidden lg:flex space-x-4">
+        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white">Home</a></li>
+        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white">About</a></li>
+        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white">Services</a></li>
+        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white">Contact</a></li>
+      </ul>
+
+ 
+      <!-- Dark/Light Mode Toggle -->
+    <div class="flex items-center space-x-2">
+        <span class="text-gray-600 dark:text-gray-300">Light</span>
+            <div class="relative">
+                <input type="checkbox" id="toggle" name="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer">
+                <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+            </div>
+        <span class="text-gray-600 dark:text-gray-300">Dark</span>
+    </div>
+  
+
+    <!-- Mobile Menu (hidden on larger screens) -->
+    <div id="mobile-menu" class="lg:hidden hidden">
+      <ul class="flex flex-col space-y-4">
+        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white">Home</a></li>
+        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white">About</a></li>
+        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white">Services</a></li>
+        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    const toggleSwitch = document.getElementById('toggle');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (toggleSwitch) {
+      const currentTheme = localStorage.getItem('theme');
+
+      if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
+
+        if (currentTheme === 'dark') {
+          toggleSwitch.checked = true;
+        }
+      }
+
+      toggleSwitch.addEventListener('change', () => {
+        if (toggleSwitch.checked) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    }
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+
+</body>
+</html>

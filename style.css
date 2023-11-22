@@ -1,10 +1,60 @@
 body{
     font-family: hack;
     margin: 0;
-    background-color: grey;
+    background-color: rgb(255, 255, 255);
 }
 
 #main-container{
-    font-weight: bold;
-    height: 300vh;
+    background: #190482;
+    color: white;
 }
+
+#navbar{
+    background-color: #8E8FFA;
+    font-weight: bold;
+
+}
+
+
+
+#home{
+    height:100vh; 
+}
+
+#content {
+    font-size: 1.6rem;
+}
+
+#image {
+    /* background-color: #7752fe69; */
+    /* background-image: url("/image.png");
+    background-size: cover; */
+    /* width: 35%; */
+    aspect-ratio: 1/1;
+    /* border-radius: 50%; */
+}
+
+#big-img {
+    border-radius: 50%;
+    background-color: #7752fe69;
+    width: 100%;
+    aspect-ratio: 1/1;
+    /* width: 200px;
+    aspect-ratio: 1/1; */
+}
+
+
+
+#about-me{
+    height:100vh;
+}
+
+#projects{
+    height:100vh;
+}
+
+#contact{
+    height:100vh;
+}
+
+
