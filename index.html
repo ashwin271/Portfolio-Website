@@ -6,7 +6,7 @@
     <title>Ashwin Murali</title>
     <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="shortcut icon" href="fav-ico.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="resources/fav-ico_bg.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,9 +29,6 @@
                     <a class="nav-link" href="#about-me">About Me</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                  </li>
-                  <li class="nav-item">
                     <a class="nav-link" href="#projects">Projects</a>
                   </li>
                   <li class="nav-item">
@@ -49,15 +46,70 @@
               <div class="row">I'm a full stack web developer.</div>
             </div> 
              
-            <div id="image" class="d-none d-lg-block col-md-5 m-5">
-              <img id="big-img" src="./image.png" alt="">
+            <div id="image" class="d-none d-lg-block col-lg-5 m-5">
+              <img id="hero-img" src="resources/image.png" alt="">
             </div>
         
         </div>
-        <div id="about-me"></div>
-        <div id="skills"></div>
-        <div id="projects"></div>
-        <div id="contact"></div>
+
+        <div id="about-me" class="container d-flex justify-content-center align-items-center ">
+          <div id="about-image-section" class="d-none d-lg-block col-lg-6 m-3 mx-lg-2">
+            <img id="about-img" src="resources/image2.jpg" alt="">
+          </div>
+          <div id="content-section" class="col-10 col-lg-6 m-3 mx-lg-2">
+            <div id="about-content-head" class="display-3">So Who Am I?</div>
+            <div id="content-about-me" class="p">
+              I'm a Computer Science student at Marian Engineering College in Trivandrum. As the Chief Marketing Officer at INSPIRA Marian IEDC, I'm deeply involved in fostering innovation and entrepreneurship. 
+              Beyond coding and development, I'm passionate about gaming and fascinated by fighter planes. Join me in navigating the dynamic world of tech and entrepreneurship.
+            </div>
+            <!-- <blockquote class="blockquote text-left mt-2">
+              <p class="mb-0"><em>Doing great work is the path to true satisfaction.</em></p>
+              <footer class="blockquote-footer mt-1">Steve Jobs</footer>
+            </blockquote> -->
+          </div>
+        </div>
+        
+        <div id="projects" class="container d-flex flex-column justify-content-center ">
+          <div id="projects-head" class="display-3 text-center">Projects</div>
+          <div id="projects-section" class="row d-flex justify-content-center">
+
+            <div class="card col-10 col-sm-5 col-md-3 m-5" style="width: 18rem;">
+              <img src="resources/todolist.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">ToDo</h5>
+                <p class="card-text">To do list web application made using html css javascript and bootstrap.</p>
+                <a href="https://github.com/ashwin271/to-do_list" class="btn btn-primary">Repo</a>
+                <a href="https://ashwin271.github.io/to-do_list/" class="btn btn-primary">Hosted</a>
+              </div>
+            </div>
+
+            <div class="card col-10 col-sm-5 col-md-3 m-5" style="width: 18rem;">
+              <img src="resources/tempcleaner.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Temp Cleaner</h5>
+                <p class="card-text">Used for cleaning temporary files in Windows, made using Batch Scripting.</p>
+                <a href="https://github.com/ashwin271/Temp_cleaner" class="btn btn-primary">Repo</a>
+              </div>
+            </div>
+
+            <div class="card col-10 col-sm-5 col-md-3 m-5" style="width: 18rem;">
+              <img src="./resources/bloodbank.png" class="card-img-top" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title">Blood Bank Management System</h5>
+                <p class="card-text">Python project using tkinter for UI and mySQL for backend</p>
+                <a href="https://github.com/ashwin271/Blood-donation-and-request-management-system" class="btn btn-primary">Repo</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="contact" class="d-flex flex-column justify-content-center align-items-center">
+          <div class="display-3">Contact me:</div>
+          <div id="contact-list">
+            <a href="https://www.linkedin.com/in/ashwin-murali-096154227/"><img src="resources/linkedin.png" alt="" style="border-radius: 50%; height: 60px; margin: 30px;"></a>
+          </div>
+        </div>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

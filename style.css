@@ -10,7 +10,7 @@ body{
 }
 
 #navbar{
-    background-color: #8E8FFA;
+    background-color: #4d4fc9fd;
     font-weight: bold;
 
 }
@@ -34,7 +34,7 @@ body{
     /* border-radius: 50%; */
 }
 
-#big-img {
+#hero-img {
     border-radius: 50%;
     background-color: #7752fe69;
     width: 100%;
@@ -49,8 +49,35 @@ body{
     height:100vh;
 }
 
+#about-image-section {
+
+}
+
+#about-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
 #projects{
-    height:100vh;
+    height: 100vh;
+}
+
+@media screen and (max-width: 1400px) {
+    
+    #projects {
+        height: auto;
+    }
+}
+
+.card {
+    background-color: #7752FE;
+}
+
+.btn{
+    background-color: #C2D9FF;
+    color:black;
+    border: none;
+    box-shadow: 0px 0px 10px 0px #C2D9FF;
 }
 
 #contact{
